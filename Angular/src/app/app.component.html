@@ -1,3 +1,22 @@
-<div class="default-style">
-  <dx-button [text]="buttonText" (onClick)="onClick($event)"></dx-button>
+<div class="demo-container">
+  <div class="placeholder">Top Content</div>
+  <dx-data-grid
+    id="gridContainer"
+    [dataSource]="dataSource"
+    keyExpr="id"
+    [showBorders]="true"
+    [columnWidth]="100"
+  >
+    <dxo-load-panel [enabled]="true"></dxo-load-panel>
+    <dxo-scrolling mode="virtual"></dxo-scrolling>
+    <dxo-sorting mode="none"></dxo-sorting>
+    <dxi-column dataField="firstName" [fixed]="true" width="80" fixedPosition="left"></dxi-column>
+    <dxi-column dataField="lastName"></dxi-column>
+    <dxi-column dataField="supervisor"></dxi-column>
+    <dxi-column dataField="startedDate"></dxi-column>
+    <dxi-column dataField="position"></dxi-column>
+    <dxi-column dataField="gender" [fixed]="true" width="80" fixedPosition="right"></dxi-column>
+    <dxi-column dataField="birthDate"></dxi-column>
+  </dx-data-grid>
+  <div class="placeholder">Bottom Content</div>
 </div>

@@ -52,6 +52,10 @@ const posRandom = function () {
   return s % (4 - 1);
 };
 
+const randomName = function() {
+  s = (2103515245 * s + 12345) % 2147483647;
+  return s % (10 - 1);
+};
 
 const generateData = function (count) {
   let i;
@@ -78,11 +82,12 @@ const generateData = function (count) {
     emplDate.setHours(12);
 
     const nameIndex = random();
+    const supIndex = randomName();
     const item = {
       id: i + 1,
       firstName: names[nameIndex],
       lastName: surnames[random()],
-      supervisor: names[nameIndex],
+      supervisor: names[supIndex],
       position: positions[posRandom()],
       gender: gender[Math.floor(nameIndex / 5)],
       birthDate,

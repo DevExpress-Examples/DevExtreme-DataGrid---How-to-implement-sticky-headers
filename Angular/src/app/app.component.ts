@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
 import { ClickEvent } from 'devextreme/ui/button';
+import { Service } from './app.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  providers: [Service],
 })
 export class AppComponent {
-  title = 'Angular';
+  dataSource: any;
 
-  counter = 0;
-
-  buttonText = 'Click count: 0';
-
-  onClick(e: ClickEvent): void {
-    this.counter++;
-    this.buttonText = `Click count: ${this.counter}`;
+  constructor(service: Service) {
+    this.dataSource = {
+      store: service.generateData(100),
+    };
   }
 }
