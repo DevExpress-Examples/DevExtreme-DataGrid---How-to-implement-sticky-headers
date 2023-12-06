@@ -1,30 +1,30 @@
 $(() => {
-  $('#gridContainer').dxDataGrid({
+  $('#grid-container').dxDataGrid({
     dataSource: generateData(100),
     keyExpr: 'id',
     showBorders: true,
     columnWidth: 100,
     selection: {
-      mode: "multiple"
+      mode: 'multiple',
     },
     columns: [
       {
-        dataField: "firstName",
+        dataField: 'firstName',
         fixed: true,
         width: 80,
-        fixedPosition: "left"
+        fixedPosition: 'left',
       },
       'lastName',
       'supervisor',
       'startedDate',
       'position',
       {
-        dataField: "gender",
+        dataField: 'gender',
         fixed: true,
         width: 80,
-        fixedPosition: "right"
+        fixedPosition: 'right',
       },
-      'birthDate'
+      'birthDate',
     ],
     loadPanel: {
       enabled: true,
@@ -52,7 +52,7 @@ const posRandom = function () {
   return s % (4 - 1);
 };
 
-const randomName = function() {
+const randomName = function () {
   s = (2103515245 * s + 12345) % 2147483647;
   return s % (10 - 1);
 };
@@ -62,11 +62,11 @@ const generateData = function (count) {
   const surnames = ['Smith', 'Johnson', 'Brown', 'Taylor', 'Anderson', 'Harris', 'Clark', 'Allen', 'Scott', 'Carter'];
   const names = ['James', 'John', 'Robert', 'Christopher', 'George', 'Mary', 'Nancy', 'Sandra', 'Michelle', 'Betty'];
   const gender = ['Male', 'Female'];
-  const positions = ["Trainee", "Junior", "Middle", "Senior"];
+  const positions = ['Trainee', 'Junior', 'Middle', 'Senior'];
   const items = [];
   const startBirthDate = Date.parse('1/1/1975');
   const endBirthDate = Date.parse('1/1/1992');
-  
+
   const empStartDate = Date.parse('1/1/2018');
   const empEndDate = Date.now();
 
@@ -75,11 +75,11 @@ const generateData = function (count) {
       (random() * (endBirthDate - startBirthDate)) / 10,
     ));
     birthDate.setHours(12);
-    
-    const emplDate = new Date(empStartDate + Math.floor(
+
+    const employmentDate = new Date(empStartDate + Math.floor(
       (random() * (empEndDate - empStartDate)) / 10,
     ));
-    emplDate.setHours(12);
+    employmentDate.setHours(12);
 
     const nameIndex = random();
     const supIndex = randomName();
@@ -91,7 +91,7 @@ const generateData = function (count) {
       position: positions[posRandom()],
       gender: gender[Math.floor(nameIndex / 5)],
       birthDate,
-      startedDate: emplDate
+      startedDate: employmentDate,
     };
     items.push(item);
   }
