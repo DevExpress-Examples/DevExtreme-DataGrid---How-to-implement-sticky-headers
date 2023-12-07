@@ -1,11 +1,13 @@
-#gridContainer {
+#grid-container {
   height: 1000px;
 }
+
 .demo-container {
   max-height: 500px;
   max-width: 500px;
   overflow-y: scroll;
 }
+
 .dx-datagrid .dx-datagrid-headers{
   background-color: #fff;
   position: sticky;
@@ -23,6 +25,6 @@
   align-items: center;
   justify-content: center;
   color: #888; /* Gray text color */
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 18px;
 }
