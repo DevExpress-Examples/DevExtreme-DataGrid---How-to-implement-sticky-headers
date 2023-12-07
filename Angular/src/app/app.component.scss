@@ -1,21 +1,21 @@
-#grid-container {
+::ng-deep #grid-container {
   height: 1000px;
 }
 
-.demo-container {
+::ng-deep .demo-container {
   max-height: 500px;
   max-width: 500px;
   overflow-y: scroll;
 }
 
-.dx-datagrid .dx-datagrid-headers{
+::ng-deep .dx-datagrid .dx-datagrid-headers{
   background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.placeholder {
+::ng-deep .placeholder {
   box-sizing: border-box;
   width: 100%;
   height: 300px;
