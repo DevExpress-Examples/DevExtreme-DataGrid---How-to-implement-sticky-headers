@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import DataSource from 'devextreme/data/data_source';
 import { ClickEvent } from 'devextreme/ui/button';
 import { Service } from './app.service';
 
@@ -9,11 +10,11 @@ import { Service } from './app.service';
   providers: [Service],
 })
 export class AppComponent {
-  dataSource: any;
+  dataSource: DataSource;
 
   constructor(service: Service) {
-    this.dataSource = {
+    this.dataSource = new DataSource({
       store: service.generateData(100),
-    };
+    });
   }
 }
