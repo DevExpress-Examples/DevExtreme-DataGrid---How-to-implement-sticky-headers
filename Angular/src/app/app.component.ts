@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import DataSource from 'devextreme/data/data_source';
-import { ClickEvent } from 'devextreme/ui/button';
 import { Service } from './app.service';
 
 @Component({
