@@ -1,22 +1,57 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
 
-import "devextreme/dist/css/dx.material.blue.light.compact.css";
-import DxButton from "devextreme-vue/button";
+import 'devextreme/dist/css/dx.material.blue.light.compact.css';
 
-const props = defineProps({
-  text: String,
-});
-const count = ref(0);
-const buttonText = computed<String>(
-  () => `Click ${props.text}: ${count.value}`
-);
-function clickHandler() {
-  count.value += 1;
-}
+import DxDataGrid, {
+  DxSorting,
+  DxScrolling,
+  DxLoadPanel,
+  DxSelection,
+  DxColumn
+} from 'devextreme-vue/data-grid';
+
+import { generateData } from '@/data';
+
+const dataSource = generateData(100);
+
 </script>
+
 <template>
-  <div>
-    <DxButton :text="buttonText" @click="clickHandler"></DxButton>
+  <div className="demo-container">
+    <div className="placeholder">Top Content</div>
+    <DxDataGrid
+      id="grid-container"
+      :data-source="dataSource"
+      key-expr="id"
+      :show-borders="true"
+      :column-width="100"
+    >
+      <DxSorting mode="none"/>
+      <DxScrolling mode="virtual"/>
+      <DxLoadPanel :enabled="true"/>
+      <DxSelection mode="multiple"/>
+      <DxColumn
+        data-field="firstName"
+        :fixed="true"
+        :width="80"
+        fixed-position="left"
+      />
+      <DxColumn data-field="lastName"/>
+      <DxColumn data-field="supervisor"/>
+      <DxColumn data-field="startedDate"/>
+      <DxColumn data-field="position"/>
+      <DxColumn
+        data-field="gender"
+        :fixed="true"
+        :width="80"
+        fixed-position="right"
+      />
+      <DxColumn data-field="birthDate"/>
+    </DxDataGrid>
+    <div className="placeholder">Bottom Content</div>
   </div>
 </template>
+
+<style scoped>
+
+</style>
