@@ -8,13 +8,20 @@ using DevExtreme.AspNet.Data;
 using DevExtreme.AspNet.Mvc;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ASP_NET_Core.Controllers {
+namespace ASP_NET_Core.Controllers
+{
 
     [Route("api/[controller]")]
-    public class SampleDataController : Controller {
+    public class SampleDataController : Controller
+    {
 
         [HttpGet]
-        public object Get(DataSourceLoadOptions loadOptions) {
+        public object Get(DataSourceLoadOptions loadOptions)
+        {
+            if (SampleData.Orders.Count == 0)
+            {
+                SampleData.Orders = SampleData.GenerateData(100);
+            }
             return DataSourceLoader.Load(SampleData.Orders, loadOptions);
         }
 
