@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
@@ -14,18 +13,16 @@
   </Target>
   <Target Name="RunGulp" BeforeTargets="BeforeBuild" Condition=" '$(Configuration)' == 'Debug' And Exists('$(SpaRoot)node_modules') ">
     <Exec WorkingDirectory="$(ProjectDir)" Command="node_modules\.bin\gulp add-resources" ContinueOnError="false">
-         <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
     </Exec>
   </Target>
   <ItemGroup>
-    <PackageReference Include="DevExtreme.AspNet.Data" Version="2.*" />
-    <PackageReference Include="DevExtreme.AspNet.Core" Version="23.1.*" />
+    <PackageReference Include="DevExtreme.AspNet.Data" Version="2.9.2" />
+    <PackageReference Include="DevExtreme.AspNet.Core" Version="23.1.6" />
   </ItemGroup>
-
   <ProjectExtensions>
     <VisualStudio>
       <UserProperties TemplateFeatures="NETCORE" />
     </VisualStudio>
   </ProjectExtensions>
-
 </Project>
