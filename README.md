@@ -1,5 +1,4 @@
 <!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/724474966/23.1.3%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1203119)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
@@ -23,24 +22,21 @@ The idea is to define header position as `sticky` and apply the following CSS ru
 
 - **jQuery**
     - [index.js](jQuery/src/index.js)
+    - [index.css](jQuery/src/index.css)
 - **Angular**
     - [app.component.html](Angular/src/app/app.component.html)
     - [app.component.ts](Angular/src/app/app.component.ts)
+    - [app.component.scss](Angular/src/app/app.component.scss)
 - **Vue**
     - [Home.vue](Vue/src/components/HomeContent.vue)
+    - [main.css](Vue/src/assets/main.css)
 - **React**
     - [App.tsx](React/src/App.tsx)
+    - [App.css](React/src/App.css)
 - **NetCore**    
     - [Index.cshtml](ASP.NET%20Core/Views/Home/Index.cshtml)
+    - [Site.css](ASP.NET%20Core/wwwroot/css/Site.css)
 
 ## Documentation
 
-- link
-- link
-- ...
-
-## More Examples
-
-- link
-- link
-- ...
+- [DevExtreme jQuery - HTML-Based Components Customization](https://js.devexpress.com/jQuery/Documentation/Guide/Themes_and_Styles/HTML-Based_Components_Customization/)
