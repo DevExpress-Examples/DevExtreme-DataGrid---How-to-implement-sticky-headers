@@ -9,7 +9,8 @@ This example demonstrates how to implement sticky headers for DataGrid.
 
 ![Screenshot 2023-11-28 174740](https://github.com/DevExpress-Examples/DevExtreme-DataGrid-How-to-implement-sticky-headers/assets/14982461/4c9ae36d-a312-43e1-ab69-9e86bc41ec41)
 
-The idea is to define header position as `sticky` and apply the following CSS rules to them:
+To implement sticky headers, apply `position: sticky` and `z-index: 1000` to the DataGrid `.dx-datagrid-headers` CSS class:
+
 ```css
   .dx-datagrid .dx-datagrid-headers{
     background-color: #fff;
@@ -40,4 +41,5 @@ The idea is to define header position as `sticky` and apply the following CSS ru
 
 ## Documentation
 
-- [DevExtreme jQuery - HTML-Based Components Customization](https://js.devexpress.com/jQuery/Documentation/Guide/Themes_and_Styles/HTML-Based_Components_Customization/)
+- [Getting Started with DataGrid](https://js.devexpress.com/Documentation/Guide/UI_Components/DataGrid/Getting_Started_with_DataGrid/)
+- [HTML-Based Components Customization](https://js.devexpress.com/Documentation/Guide/Themes_and_Styles/HTML-Based_Components_Customization/)
