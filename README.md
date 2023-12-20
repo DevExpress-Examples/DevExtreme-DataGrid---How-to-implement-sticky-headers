@@ -8,7 +8,10 @@ This example demonstrates how to implement sticky headers for DataGrid.
 
 ![Screenshot 2023-11-28 174740](https://github.com/DevExpress-Examples/DevExtreme-DataGrid-How-to-implement-sticky-headers/assets/14982461/4c9ae36d-a312-43e1-ab69-9e86bc41ec41)
 
-To implement sticky headers, apply `position: sticky` and `z-index: 1000` to the DataGrid `.dx-datagrid-headers` CSS class:
+To implement sticky headers, modify DataGrid's stylesheet. Apply the following attributes to the CSS class `.dx-datagrid-headers`:
+
+- `position: sticky`
+- `z-index: 1000`
 
 ```css
   .dx-datagrid .dx-datagrid-headers{
