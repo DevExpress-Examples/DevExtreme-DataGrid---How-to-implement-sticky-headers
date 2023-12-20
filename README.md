@@ -4,7 +4,7 @@
 <!-- default badges end -->
 # DataGrid for DevExtreme - How to implement sticky headers
 
-This example demonstrates how to implement sticky headers for DataGrid. 
+This example demonstrates how to implement sticky headers for a DataGrid component.
 
 ![Screenshot 2023-11-28 174740](https://github.com/DevExpress-Examples/DevExtreme-DataGrid-How-to-implement-sticky-headers/assets/14982461/4c9ae36d-a312-43e1-ab69-9e86bc41ec41)
 
