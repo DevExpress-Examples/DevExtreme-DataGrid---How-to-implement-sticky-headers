@@ -15,6 +15,10 @@
   z-index: 1000;
 }
 
+::ng-deep .dx-datagrid .dx-datagrid-columns-separator {
+  z-index: 1001;
+}
+
 ::ng-deep .placeholder {
   box-sizing: border-box;
   width: 100%;

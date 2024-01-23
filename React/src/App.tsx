@@ -18,6 +18,7 @@ function App(): JSX.Element {
         keyExpr="id"
         showBorders={true}
         columnWidth={100}
+        allowColumnResizing={true}
       >
         <Sorting mode="none" />
         <Scrolling mode="virtual" />

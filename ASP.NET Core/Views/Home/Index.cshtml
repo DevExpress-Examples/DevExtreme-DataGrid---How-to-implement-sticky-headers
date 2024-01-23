@@ -9,6 +9,7 @@
         .ShowBorders(true)
         .DataSource(d => d.Mvc().Controller("SampleData").LoadAction("Get").Key("ID"))
         .ColumnWidth(100)
+        .AllowColumnResizing(true)
         .Columns(columns =>
         {
             columns.AddFor(m => m.FirstName).Fixed(true).Width(80).FixedPosition(HorizontalEdge.Left);
