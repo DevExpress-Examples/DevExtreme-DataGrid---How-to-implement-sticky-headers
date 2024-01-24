@@ -4,6 +4,7 @@ $(() => {
     keyExpr: 'id',
     showBorders: true,
     columnWidth: 100,
+    allowColumnResizing: true,
     selection: {
       mode: 'multiple',
     },

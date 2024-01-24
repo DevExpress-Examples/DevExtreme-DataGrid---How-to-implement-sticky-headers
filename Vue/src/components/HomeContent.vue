@@ -25,6 +25,7 @@ const dataSource = generateData(100);
       key-expr="id"
       :show-borders="true"
       :column-width="100"
+      :allow-column-resizing="true"
     >
       <DxSorting mode="none"/>
       <DxScrolling mode="virtual"/>
